@@ -22,5 +22,7 @@ namespace IdentitySystemWithNetCore.Controllers
         {
             return View(userManager.Users.ToList());
         }
+
+
     }
 }
