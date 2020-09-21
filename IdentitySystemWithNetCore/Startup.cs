@@ -39,6 +39,10 @@ namespace IdentitySystemWithNetCore
             });
 
             services.AddIdentity<AppUser, AppRole>(opts => {
+                opts.User.RequireUniqueEmail = true;
+
+                opts.User.AllowedUserNameCharacters =
+                "abcçdefghıijklmnopqrsştuüvwxyzABCÇDEFGHIİJKLMNOÖPQRSŞTUVWXYZ0123456789-._@+";
                 opts.Password.RequiredLength = 4;
                 opts.Password.RequireNonAlphanumeric = false;
                 opts.Password.RequireLowercase = false;
