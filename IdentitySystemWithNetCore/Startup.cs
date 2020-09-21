@@ -49,7 +49,7 @@ namespace IdentitySystemWithNetCore
                 opts.Password.RequireUppercase = false;
                 opts.Password.RequireDigit = false;
 
-            }).AddPasswordValidator<CustomPasswordValidator>().AddEntityFrameworkStores<AppIdentityDbContext>();
+            }).AddPasswordValidator<CustomPasswordValidator>().AddUserValidator<CustomUserValidator>()AddEntityFrameworkStores<AppIdentityDbContext>();
 
 
 
